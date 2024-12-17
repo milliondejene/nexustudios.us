@@ -13,6 +13,16 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const intl = useIntl(); // Use the useIntl hook to access current language and translations
 
+  // Define the available languages with their codes and full names
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'sv', name: 'Swedish' },
+    { code: 'om', name: 'Oromo' },
+    { code: 'am', name: 'Amharic' }
+  ];
+
+  const currentLanguage = intl.locale; // Get the current language
+
   // Toggle the mobile menu visibility
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -21,9 +31,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
     changeLocale(language); // Change the language
     setIsLangDropdownOpen(false); // Close the dropdown after selection
   };
-
-  const languages = ['en', 'sv', 'om', 'am']; // Available languages
-  const currentLanguage = intl.locale; // Get the current language
 
   return (
     <header
@@ -103,19 +110,22 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
               className="text-sm text-gray-700 dark:text-gray-300"
             >
-              {currentLanguage.toUpperCase()}
+              {
+                // Find the full language name based on the current language code
+                languages.find((lang) => lang.code === currentLanguage)?.name || currentLanguage.toUpperCase()
+              }
             </button>
 
             {isLangDropdownOpen && (
               <div className="absolute right-0 mt-2 w-24 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow-lg">
                 <ul className="space-y-2 p-2">
                   {languages.map((lang) => (
-                    <li key={lang}>
+                    <li key={lang.code}>
                       <button
-                        onClick={() => handleLanguageChange(lang)}
+                        onClick={() => handleLanguageChange(lang.code)}
                         className="w-full text-left text-sm text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
                       >
-                        {lang.toUpperCase()}
+                        {lang.name} {/* Full name of the language */}
                       </button>
                     </li>
                   ))}
@@ -136,19 +146,22 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
               className="text-sm text-gray-700 dark:text-gray-300"
             >
-              {currentLanguage.toUpperCase()}
+              {
+                // Show the current language name in the mobile version as well
+                languages.find((lang) => lang.code === currentLanguage)?.name || currentLanguage.toUpperCase()
+              }
             </button>
 
             {isLangDropdownOpen && (
               <div className="absolute right-0 mt-2 w-24 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow-lg">
                 <ul className="space-y-2 p-2">
                   {languages.map((lang) => (
-                    <li key={lang}>
+                    <li key={lang.code}>
                       <button
-                        onClick={() => handleLanguageChange(lang)}
+                        onClick={() => handleLanguageChange(lang.code)}
                         className="w-full text-left text-sm text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
                       >
-                        {lang.toUpperCase()}
+                        {lang.name}
                       </button>
                     </li>
                   ))}

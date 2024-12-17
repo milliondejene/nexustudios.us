@@ -1,18 +1,22 @@
 import React, { useState } from "react";
+import { useIntl } from "gatsby-plugin-intl"; // Import useIntl hook for translations
 
 const Contact: React.FC = () => {
   const [theme, setTheme] = useState<string>("light");
+  const intl = useIntl(); // Get the intl object for translations
 
+  // Fetching the translated address from the intl object
   const address = {
-    street: "123 Main St",
-    city: "Cityville",
-    state: "ST",
-    zip: "12345",
-    phone: "(123) 456-7890",
-    email: "contact@company.com",
+    street: intl.formatMessage({ id: "contact.address.street" }),
+    city: intl.formatMessage({ id: "contact.address.city" }),
+    state: intl.formatMessage({ id: "contact.address.state" }),
+    zip: intl.formatMessage({ id: "contact.address.zip" }),
+    phone: intl.formatMessage({ id: "contact.address.phone" }),
+    email: intl.formatMessage({ id: "contact.address.email" }),
   };
 
-  const mapUrl = "https://www.google.com/maps/embed/v1/place?q=123+Main+St,+Cityville,+ST+12345&key=YOUR_GOOGLE_MAPS_API_KEY"; // Replace with actual Google Maps link
+  // Google Maps URL for embedding
+  const mapUrl = "https://www.google.com/maps/embed/v1/place?q=123+Main+St,+Cityville,+ST+12345&key=YOUR_GOOGLE_MAPS_API_KEY"; // Replace with actual API key
 
   return (
     <section
@@ -38,14 +42,14 @@ const Contact: React.FC = () => {
               theme === "light" ? "text-indigo-600" : "text-indigo-300"
             }`}
           >
-            Contact Us
+            {intl.formatMessage({ id: "contact.title" })} {/* Translated title */}
           </h1>
           <p
             className={`text-lg mb-6 ${
               theme === "light" ? "text-gray-600" : "text-gray-300"
             }`}
           >
-            Feel free to reach out to us! We are located at the address below:
+            {intl.formatMessage({ id: "contact.description" })} {/* Translated description */}
           </p>
           <div
             className={`text-lg ${
@@ -56,8 +60,13 @@ const Contact: React.FC = () => {
             <p>
               {address.city}, {address.state} {address.zip}
             </p>
-            <p>Phone: {address.phone}</p>
-            <p>Email: <a href={`mailto:${address.email}`} className="text-indigo-500">{address.email}</a></p>
+            <p>{intl.formatMessage({ id: "contact.address.phone" })}: {address.phone}</p>
+            <p>
+              {intl.formatMessage({ id: "contact.address.email" })}:{" "}
+              <a href={`mailto:${address.email}`} className="text-indigo-500">
+                {address.email}
+              </a>
+            </p>
           </div>
         </div>
 
@@ -70,10 +79,10 @@ const Contact: React.FC = () => {
               theme === "light" ? "text-indigo-600" : "text-indigo-300"
             }`}
           >
-            Our Location
+            {intl.formatMessage({ id: "contact.locationTitle" })} {/* Translated location title */}
           </h2>
           <iframe
-            title="Office Location"
+            title={intl.formatMessage({ id: "contact.mapAlt" })}  
             src={mapUrl}
             width="100%"
             height="400"

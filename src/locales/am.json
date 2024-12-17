@@ -68,5 +68,19 @@
         "description": "ካይ ሄሮን በአሳምኝነት አምባሳል አዳዲስ ተዛማች ስለነፀ ቀረበት በመመለከት."
       }
     ]
+  },
+  "contact": {
+    "title": "እኛን እንደምትገናኙ",
+    "description": "በእኛ ጋር ማግኘት በነፃ ነው! እኛ በእንቁላል አድራሻው እንደተመለከተ እንቀመጣለን፡፡",
+    "address": {
+      "street": "123 Main St",
+      "city": "Cityville",
+      "state": "ST",
+      "zip": "12345",
+      "phone": "(123) 456-7890",
+      "email": "contact@company.com"
+    },
+    "locationTitle": "ቦታችን",
+    "mapAlt": "እትም ቦታ"
   }
 }

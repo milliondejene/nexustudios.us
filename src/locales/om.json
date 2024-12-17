@@ -3,11 +3,11 @@
     
     "footer": {
       "copyright": "&copy; {year} {company}. Mirga hundi ni eeyyamame.",
-      "socialLinks": {
+    
         "facebook": "Facebook",
         "twitter": "Twitter",
         "instagram": "Instagram"
-      }
+      
     },
     
     "header": {
@@ -23,36 +23,33 @@
       "description": "Projektii hundaa wajjin haala haaraan hojjennu—teeknoolojii haaraa fi qajeelfama haaromsaaf bakka bu'a."
     },
   
-    "aboutUs": {
-      "title": "Nu Haa Beeku",
-      "description": "NexusStudio garee hojjattoota garaagaraa kan bu'uura teeknoolojii haaraa fi hojiilee multimedia keessatti dandeettii qabaatu.",
-      "mission": {
-        "title": "Kaayyoo Keenya",
-        "description": "Karaa muuxannoo dijitaalaa adda ta'e kan dandeettii guddina fi hirmaannaa fiduuf dhaabbilee cimsuuf hojjechuu."
-      }
+"aboutUs": {
+  "title": "Nuti Eenyu?",
+  "description": "NexusStudio garee uumamaa kanneen hojiiwwan websirfii, falmiiwwan multimedia fi muuxannoo dijitaalaa kanneen haaraa fi guddina qindeessan hojjetu dha.",
+  "mission": "Kaayyoo Keenya",
+  "missionDescription": "Hojiiwwan dijitaalaa adda ta'een daldaltoota gargaaruu fi guddina fi hirmaannaa akka argatan taasisa."
     },
   
     "ourWork": {
-      "title": "Hojii Keenya",
-      "projectsGlimpse": "Glimphee Hojii Keenya",
-      "projectsDescription": "Projektoota gurguddaa fi hojiilee haaraa waliin hojjetamanii fi gatii qaban ilaaluuf.",
-      "projects": [
-        {
-          "title": "Projektii 1",
-          "description": "Kun Projektii 1 kan dhugoomsuudhaaf gargaaru."
-        },
-        {
-          "title": "Projektii 2",
-          "description": "Kun Projektii 2 kan dhimma fayyadamtootaa keessatti dandeettii fooyya'aa fiduuf hojjetame."
-        },
-        {
-          "title": "Projektii 3",
-          "description": "Kun Projektii 3 kan dhimma hojii fi bu'aalee waliin wal qabatee tajaajilaa fi qajeelfama gargaaru."
-        }
-      ],
-      "viewProject": "Projektii Ilaali",
-      "contactButton": "Nu Quunnami"
-    },
+  "title": "Hojii Keenya",
+  "projectsGlimpse": "Glimphee Hojii Keenya",
+  "projectsDescription": "Projektoota gurguddaa fi hojiilee haaraa waliin hojjetamanii fi gatii qaban ilaaluuf.",
+  "project1": {
+    "title": "Projektii 1",
+    "description": "Kun Projektii 1 kan dhugoomsuudhaaf gargaaru."
+  },
+  "project2": {
+    "title": "Projektii 2",
+    "description": "Kun Projektii 2 kan dhimma fayyadamtootaa keessatti dandeettii fooyya'aa fiduuf hojjetame."
+  },
+  "project3": {
+    "title": "Projektii 3",
+    "description": "Kun Projektii 3 kan dhimma hojii fi bu'aalee waliin wal qabatee tajaajilaa fi qajeelfama gargaaru."
+  },
+  "viewProject": "Projektii Ilaali",
+  "contactButton": "Nu Quunnami"
+},
+
   
     "teams": {
       "title": "Team Keenya Barbaadi",
@@ -77,6 +74,20 @@
           "description": "Kai dandeettii fi muuxannoo uumamaa guddaa qabu fi hojiiwwan tasgabbii fi sirriitti hojjachuu."
         }
       ]
-    }
+    },
+    "contact": {
+    "title": "Nu Quunnami",
+    "description": "Nu qunnamuuf ni bilisoodha! Teessoon keenya asitti argama:",
+    "address": {
+      "street": "123 Main St",
+      "city": "Cityville",
+      "state": "ST",
+      "zip": "12345",
+      "phone": "(123) 456-7890",
+      "email": "contact@company.com"
+    },
+    "locationTitle": "Iddoo Keenya",
+    "mapAlt": "Iddoo Hojii"
+  }
   }
   

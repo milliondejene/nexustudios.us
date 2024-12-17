@@ -69,5 +69,19 @@
         "description": "Kai is an imaginative creative director with a keen eye for visual storytelling. He leads the creative team to develop engaging content and ensures that our projects stand out with cutting-edge designs."
       }
     ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Feel free to reach out to us! We are located at the address below:",
+    "address": {
+      "street": "123 Main St",
+      "city": "Cityville",
+      "state": "ST",
+      "zip": "12345",
+      "phone": "(123) 456-7890",
+      "email": "contact@company.com"
+    },
+    "locationTitle": "Our Location",
+    "mapAlt": "Office Location"
   }
 }

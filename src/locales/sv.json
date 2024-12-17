@@ -3,17 +3,17 @@
   
   "footer": {
     "copyright": "&copy; {year} {company}. Alla rättigheter förbehållna.",
-    "socialLinks": {
+
       "facebook": "Facebook",
       "twitter": "Twitter",
       "instagram": "Instagram"
-    }
+    
   },
   
   "header": {
     "about": "Om oss",
     "ourWork": "Vårt arbete",
-    "teams": "Team",
+    "teams": "Vårt team",
     "contact": "Kontakt",
     "language": "Språk"
   },
@@ -23,33 +23,29 @@
     "description": "Vi innoverar med varje projekt—din plattform för nästa generations webb utveckling och medielösningar."
   },
 
-  "aboutUs": {
-    "title": "Om oss",
-    "description": "NexusStudio är en kreativ byrå som specialiserar sig på innovativ webb-utveckling, multimedia lösningar och banbrytande digitala upplevelser.",
-    "mission": {
-      "title": "Vårt uppdrag",
-      "description": "Att stärka företag genom exceptionella digitala upplevelser som driver tillväxt och engagemang."
-    }
-  },
+"aboutUs": {
+  "title": "Om Oss",
+  "description": "NexusStudio är en kreativ byrå som specialiserar sig på innovativ webbutveckling, multimedia-lösningar och banbrytande digitala upplevelser.",
+  "mission": "Vår Mission",
+  "missionDescription": "Att stärka företag genom exceptionella digitala upplevelser som driver tillväxt och engagemang."
+},
 
-  "ourWork": {
+ "ourWork": {
     "title": "Vårt arbete",
     "projectsGlimpse": "En glimt av våra projekt",
     "projectsDescription": "Utforska de projekt vi har arbetat med.",
-    "projects": [
-      {
-        "title": "Projekt 1",
-        "description": "Detta är beskrivningen för Projekt 1."
-      },
-      {
-        "title": "Projekt 2",
-        "description": "Detta är beskrivningen för Projekt 2."
-      },
-      {
-        "title": "Projekt 3",
-        "description": "Detta är beskrivningen för Projekt 3."
-      }
-    ],
+    "project1": {
+      "title": "Projekt 1",
+      "description": "Detta är beskrivningen för Projekt 1."
+    },
+    "project2": {
+      "title": "Projekt 2",
+      "description": "Detta är beskrivningen för Projekt 2."
+    },
+    "project3": {
+      "title": "Projekt 3",
+      "description": "Detta är beskrivningen för Projekt 3."
+    },
     "viewProject": "Visa projekt",
     "contactButton": "Kontakta oss"
   },
@@ -77,5 +73,19 @@
         "description": "Kai är en fantasifull kreativ director med ett skarpt öga för visuell berättande. Han leder det kreativa teamet för att utveckla engagerande innehåll och ser till att våra projekt sticker ut med banbrytande design."
       }
     ]
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "description": "Tveka inte att kontakta oss! Vi finns på adressen nedan:",
+    "address": {
+      "street": "123 Main St",
+      "city": "Cityville",
+      "state": "ST",
+      "zip": "12345",
+      "phone": "(123) 456-7890",
+      "email": "contact@company.com"
+    },
+    "locationTitle": "Vår Plats",
+    "mapAlt": "Kontorsplats"
   }
 }

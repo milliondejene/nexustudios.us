@@ -26,13 +26,23 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
   return (
     <footer
       className={`relative w-full py-8 px-6 flex justify-center items-center ${
-        theme === 'dark' ? 'bg-gradient-to-r from-gray-900 to-indigo-900 text-white' : 'bg-gradient-to-r from-gray-800 to-gray-900 text-white'
+        theme === 'dark'
+          ? 'bg-gradient-to-r from-gray-900 to-indigo-900 text-white'
+          : 'bg-gradient-to-r from-indigo-50 to-indigo-100 text-gray-900' // Adjust light theme gradient
       }`}
     >
       {/* Glassmorphism effect container */}
-      <div className="absolute inset-0 bg-white bg-opacity-40 backdrop-blur-sm z-0 dark:bg-gray-900 dark:bg-opacity-50" />
+      <div
+        className={`absolute inset-0 bg-white bg-opacity-40 backdrop-blur-sm z-0 ${
+          theme === 'dark' ? 'dark:bg-gray-900 dark:bg-opacity-50' : ''
+        }`}
+      />
 
-      <div className="relative text-center p-6 bg-white bg-opacity-70 backdrop-blur-lg rounded-xl shadow-lg z-10 transform transition-transform hover:scale-105 duration-300 ease-in-out dark:bg-gray-800 dark:bg-opacity-80 max-w-2xl w-full">
+      <div
+        className={`relative text-center p-6 bg-white bg-opacity-70 backdrop-blur-lg rounded-xl shadow-lg z-10 transform transition-transform hover:scale-105 duration-300 ease-in-out ${
+          theme === 'dark' ? 'dark:bg-gray-800 dark:bg-opacity-80' : 'dark:bg-opacity-70'
+        } max-w-2xl w-full`}
+      >
         <p className="text-sm mb-4">
           <FormattedMessage
             id="footer.copyright"
@@ -72,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           <a
             href="#"
             className={`${
-              theme === 'dark' ? 'text-gray-400 hover:text-indigo-500' : 'text-gray-400 hover:text-indigo-500'
+              theme === 'dark' ? 'text-gray-400 hover:text-indigo-500' : 'text-gray-600 hover:text-indigo-500'
             } transition duration-200`}
           >
             <FormattedMessage id="footer.facebook" />
@@ -80,7 +90,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           <a
             href="#"
             className={`${
-              theme === 'dark' ? 'text-gray-400 hover:text-indigo-500' : 'text-gray-400 hover:text-indigo-500'
+              theme === 'dark' ? 'text-gray-400 hover:text-indigo-500' : 'text-gray-600 hover:text-indigo-500'
             } transition duration-200`}
           >
             <FormattedMessage id="footer.twitter" />
@@ -88,7 +98,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           <a
             href="#"
             className={`${
-              theme === 'dark' ? 'text-gray-400 hover:text-indigo-500' : 'text-gray-400 hover:text-indigo-500'
+              theme === 'dark' ? 'text-gray-400 hover:text-indigo-500' : 'text-gray-600 hover:text-indigo-500'
             } transition duration-200`}
           >
             <FormattedMessage id="footer.instagram" />
