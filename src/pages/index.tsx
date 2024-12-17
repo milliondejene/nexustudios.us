@@ -1,36 +1,51 @@
-import * as React from "react";
-import { Link } from "gatsby";
-import Footer from "../components/Footer"; // Import the Header component
-import Header from "../components/Header"; // Import the Footer component
-import type { HeadFC, PageProps } from "gatsby";
+import React, { Suspense, lazy, useEffect, useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import OurWork from "../components/our-work";
+import Teams from "../components/Teams";
 
-const IndexPage: React.FC<PageProps> = () => {
+const Home = lazy(() => import("../components/Home"));
+const About = lazy(() => import("../components/About"));
+const Contact = lazy(() => import("../components/Contact"));
+const App: React.FC = () => {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  // Check and set theme from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.add(savedTheme);
+    } else {
+      document.documentElement.classList.add('light'); // Default theme
+    }
+  }, []);
+
+  // Toggle theme function
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme); // Save theme preference
+  };
+
   return (
-    <div className="relative">
-      <Header /> {/* Include Header */}
-
-      {/* Hero Section */}
-      <main className="flex justify-center items-center min-h-screen bg-gray-100 text-gray-900 pt-20">
-        <div className="text-center p-8 bg-white rounded-lg shadow-xl max-w-lg w-full">
-          <h1 className="text-4xl font-semibold text-indigo-600 mb-4">
-            Welcome to NexusStudio
-          </h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Innovating with every project—your go-to platform for next-generation web development and media solutions.
-          </p>
-          <Link
-            to="/about"
-            className="inline-block px-6 py-3 text-white bg-indigo-600 rounded-lg text-lg font-semibold transition-all hover:bg-indigo-700"
-          >
-            Learn More About Us
-          </Link>
-        </div>
+    <div className={`font-sans min-h-screen ${theme === 'light' ? 'bg-gradient-to-b from-blue-50 to-white' : 'bg-gray-900 text-white'}`}>
+      <Header toggleTheme={toggleTheme} theme={theme} /> {/* Passing the props here */}
+      <main>
+        <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+          <Home />
+          <About theme={theme} />
+          <OurWork theme={theme} />
+          <Teams theme={theme} />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer /> {/* Include Footer */}
+      <Footer theme={theme}/>
     </div>
   );
 };
 
-export default IndexPage;
 
-export const Head: HeadFC = () => <title>Welcome to NexusStudio</title>;
+export default App;
