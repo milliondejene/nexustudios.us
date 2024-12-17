@@ -58,6 +58,18 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
             </li>
             <li>
               <Link
+                to="#teams"
+                className={`${
+                  theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+                } hover:${
+                  theme === 'light' ? 'text-indigo-600' : 'text-indigo-400'
+                } transition-colors`}
+              >
+                Teams
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="#contact"
                 className={`${
                   theme === 'light' ? 'text-gray-700' : 'text-gray-300'
@@ -133,6 +145,19 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               onClick={() => setIsMenuOpen(false)}
             >
               Our Work
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="#teams"
+              className={`${
+                theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+              } hover:${
+                theme === 'light' ? 'text-indigo-600' : 'text-indigo-400'
+              } transition-colors`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Teams
             </Link>
           </li>
           <li>
