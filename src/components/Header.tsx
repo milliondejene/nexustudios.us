@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { useIntl, changeLocale } from 'gatsby-plugin-intl'; // Import for internationalization
 import ThemeToggle from './Themetoggle';
 
 interface HeaderProps {
@@ -9,9 +10,20 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+  const intl = useIntl(); // Use the useIntl hook to access current language and translations
 
   // Toggle the mobile menu visibility
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Handle language change
+  const handleLanguageChange = (language: string) => {
+    changeLocale(language); // Change the language
+    setIsLangDropdownOpen(false); // Close the dropdown after selection
+  };
+
+  const languages = ['en', 'sv', 'om', 'am']; // Available languages
+  const currentLanguage = intl.locale; // Get the current language
 
   return (
     <header
@@ -41,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
                   theme === 'light' ? 'text-indigo-600' : 'text-indigo-400'
                 } transition-colors`}
               >
-                About
+                {intl.formatMessage({ id: 'header.about' })}
               </Link>
             </li>
             <li>
@@ -53,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
                   theme === 'light' ? 'text-indigo-600' : 'text-indigo-400'
                 } transition-colors`}
               >
-                Our Work
+                {intl.formatMessage({ id: 'header.ourWork' })}
               </Link>
             </li>
             <li>
@@ -65,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
                   theme === 'light' ? 'text-indigo-600' : 'text-indigo-400'
                 } transition-colors`}
               >
-                Teams
+                {intl.formatMessage({ id: 'header.teams' })}
               </Link>
             </li>
             <li>
@@ -77,26 +89,83 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
                   theme === 'light' ? 'text-indigo-600' : 'text-indigo-400'
                 } transition-colors`}
               >
-                Contact
+                {intl.formatMessage({ id: 'header.contact' })}
               </Link>
             </li>
           </ul>
         </nav>
 
+        {/* Language Switcher (Desktop: Right of Theme Toggle) */}
+        <div className="hidden md:flex items-center space-x-4">
+          <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
+          <div className="relative">
+            <button
+              onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+              className="text-sm text-gray-700 dark:text-gray-300"
+            >
+              {currentLanguage.toUpperCase()}
+            </button>
+
+            {isLangDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-24 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow-lg">
+                <ul className="space-y-2 p-2">
+                  {languages.map((lang) => (
+                    <li key={lang}>
+                      <button
+                        onClick={() => handleLanguageChange(lang)}
+                        className="w-full text-left text-sm text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+                      >
+                        {lang.toUpperCase()}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+
         {/* Mobile Navigation (Hamburger Menu) */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 md:hidden">
           {/* Theme Toggle Button */}
           <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
+
+          {/* Language Switcher (Mobile: In Between Menu and Theme Toggle) */}
+          <div className="relative">
+            <button
+              onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+              className="text-sm text-gray-700 dark:text-gray-300"
+            >
+              {currentLanguage.toUpperCase()}
+            </button>
+
+            {isLangDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-24 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow-lg">
+                <ul className="space-y-2 p-2">
+                  {languages.map((lang) => (
+                    <li key={lang}>
+                      <button
+                        onClick={() => handleLanguageChange(lang)}
+                        className="w-full text-left text-sm text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+                      >
+                        {lang.toUpperCase()}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
 
           {/* Mobile Navigation Toggle */}
           <button
             onClick={toggleMenu}
-            className="md:hidden focus:outline-none transition-transform hover:scale-110"
+            className="focus:outline-none transition-transform hover:scale-110"
             aria-label="Toggle navigation menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`h-6 w-6 ${theme === 'light' ? 'text-black' : 'text-white'}`} // Conditional color for the menu icon
+              className={`h-6 w-6 ${theme === 'light' ? 'text-black' : 'text-white'}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -131,7 +200,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               } transition-colors`}
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              {intl.formatMessage({ id: 'header.about' })}
             </Link>
           </li>
           <li>
@@ -144,7 +213,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               } transition-colors`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Our Work
+              {intl.formatMessage({ id: 'header.ourWork' })}
             </Link>
           </li>
           <li>
@@ -157,7 +226,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               } transition-colors`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Teams
+              {intl.formatMessage({ id: 'header.teams' })}
             </Link>
           </li>
           <li>
@@ -170,7 +239,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               } transition-colors`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              {intl.formatMessage({ id: 'header.contact' })}
             </Link>
           </li>
         </ul>

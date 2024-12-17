@@ -1,4 +1,5 @@
 import * as React from "react";
+import { FormattedMessage } from "react-intl";
 
 // Define the type for the 'theme' prop
 interface TeamsProps {
@@ -49,14 +50,14 @@ const Teams: React.FC<TeamsProps> = ({ theme }) => (
           theme === "light" ? "text-indigo-600" : "text-indigo-300"
         }`}
       >
-        Meet Our Team
+        <FormattedMessage id="teams.title" />
       </h1>
       <p
         className={`text-lg max-w-3xl mx-auto mb-8 ${
           theme === "light" ? "text-gray-600" : "text-gray-300"
         }`}
       >
-        Our talented team is dedicated to providing innovative solutions and exceptional user experiences.
+        <FormattedMessage id="teams.description" />
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -89,7 +90,7 @@ const Teams: React.FC<TeamsProps> = ({ theme }) => (
                   theme === "light" ? "text-gray-700" : "text-gray-300"
                 }`}
               >
-                {member.role}
+                <FormattedMessage id="teams.members.role" values={{ role: member.role }} />
               </p>
               <p
                 className={`text-gray-700 ${

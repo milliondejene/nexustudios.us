@@ -1,0 +1,81 @@
+{
+  "loading": "Laddar...",
+  
+  "footer": {
+    "copyright": "&copy; {year} {company}. Alla rättigheter förbehållna.",
+    "socialLinks": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    }
+  },
+  
+  "header": {
+    "about": "Om oss",
+    "ourWork": "Vårt arbete",
+    "teams": "Team",
+    "contact": "Kontakt",
+    "language": "Språk"
+  },
+
+  "home": {
+    "welcomeMessage": "Välkommen till NexusStudio",
+    "description": "Vi innoverar med varje projekt—din plattform för nästa generations webb utveckling och medielösningar."
+  },
+
+  "aboutUs": {
+    "title": "Om oss",
+    "description": "NexusStudio är en kreativ byrå som specialiserar sig på innovativ webb-utveckling, multimedia lösningar och banbrytande digitala upplevelser.",
+    "mission": {
+      "title": "Vårt uppdrag",
+      "description": "Att stärka företag genom exceptionella digitala upplevelser som driver tillväxt och engagemang."
+    }
+  },
+
+  "ourWork": {
+    "title": "Vårt arbete",
+    "projectsGlimpse": "En glimt av våra projekt",
+    "projectsDescription": "Utforska de projekt vi har arbetat med.",
+    "projects": [
+      {
+        "title": "Projekt 1",
+        "description": "Detta är beskrivningen för Projekt 1."
+      },
+      {
+        "title": "Projekt 2",
+        "description": "Detta är beskrivningen för Projekt 2."
+      },
+      {
+        "title": "Projekt 3",
+        "description": "Detta är beskrivningen för Projekt 3."
+      }
+    ],
+    "viewProject": "Visa projekt",
+    "contactButton": "Kontakta oss"
+  },
+
+  "teams": {
+    "title": "Möt Vårt Team",
+    "description": "Vårt talangfulla team är dedikerat till att erbjuda innovativa lösningar och exceptionella användarupplevelser.",
+    "members": [
+      {
+        "name": "Joshua Germod",
+        "role": "Marknadsföringschef",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Joshua är en strategisk marknadsförare med omfattande erfarenhet av att driva varumärkesutveckling. Han leder våra marknadsföringsstrategier och arbetar nära teamet för att skapa effektiva kampanjer."
+      },
+      {
+        "name": "Million Dejene",
+        "role": "Programvaruingenjör",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Million är en talangfull programvaruingenjör som fokuserar på att bygga skalbara och effektiva applikationer. Han säkerställer att den tekniska sidan av projekten löper smidigt och strävar efter innovativa lösningar."
+      },
+      {
+        "name": "Kai Heron",
+        "role": "Kreativ Director",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Kai är en fantasifull kreativ director med ett skarpt öga för visuell berättande. Han leder det kreativa teamet för att utveckla engagerande innehåll och ser till att våra projekt sticker ut med banbrytande design."
+      }
+    ]
+  }
+}

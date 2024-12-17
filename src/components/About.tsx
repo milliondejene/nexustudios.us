@@ -1,10 +1,13 @@
 import React from 'react';
+import { useIntl } from 'gatsby-plugin-intl'; // Import intl hook for internationalization
 
 interface AboutProps {
   theme: 'light' | 'dark';
 }
 
 const About: React.FC<AboutProps> = ({ theme }) => {
+  const intl = useIntl(); // Use the useIntl hook for translations
+
   return (
     <section
       id="about"
@@ -25,14 +28,14 @@ const About: React.FC<AboutProps> = ({ theme }) => {
             theme === 'light' ? 'text-indigo-600' : 'text-white'
           } mb-6 leading-tight`}
         >
-          About Us
+          {intl.formatMessage({ id: 'aboutUs.title' })} {/* Translated title */}
         </h1>
         <p
           className={`text-lg ${
             theme === 'light' ? 'text-gray-700' : 'text-gray-300'
           } mb-6 max-w-3xl mx-auto`}
         >
-          NexusStudio is a creative agency specializing in innovative web development, multimedia solutions, and cutting-edge digital experiences.
+          {intl.formatMessage({ id: 'aboutUs.description' })} {/* Translated description */}
         </p>
 
         <h2
@@ -40,14 +43,14 @@ const About: React.FC<AboutProps> = ({ theme }) => {
             theme === 'light' ? 'text-gray-800' : 'text-gray-200'
           } mb-4`}
         >
-          Our Mission
+          {intl.formatMessage({ id: 'aboutUs.mission' })} {/* Translated mission title */}
         </h2>
         <p
           className={`text-lg ${
             theme === 'light' ? 'text-gray-700' : 'text-gray-300'
           } max-w-3xl mx-auto`}
         >
-          To empower businesses through exceptional digital experiences that drive growth and engagement.
+          {intl.formatMessage({ id: 'aboutUs.missionDescription' })} {/* Translated mission description */}
         </p>
       </div>
     </section>

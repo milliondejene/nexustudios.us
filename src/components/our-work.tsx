@@ -1,11 +1,14 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { useIntl } from "gatsby-plugin-intl"; // Import intl hook for internationalization
 
 interface OurWorkProps {
   theme: 'light' | 'dark';
 }
 
 const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
+  const intl = useIntl(); // Use the useIntl hook for translations
+
   return (
     <div id="our-work" className="max-w-7xl mx-auto px-6 py-12">
       <h1
@@ -13,7 +16,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
           theme === 'light' ? 'text-indigo-600' : 'text-indigo-300'
         }`}
       >
-        Our Work
+        {intl.formatMessage({ id: "ourWork.title" })} {/* Translated title */}
       </h1>
 
       <section className="mb-8">
@@ -22,14 +25,14 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
             theme === 'light' ? 'text-gray-800' : 'text-gray-200'
           }`}
         >
-          A Glimpse of Our Projects
+          {intl.formatMessage({ id: "ourWork.projectsGlimpse" })} {/* Translated subtitle */}
         </h2>
         <p
           className={`text-lg mb-4 text-center ${
             theme === 'light' ? 'text-gray-700' : 'text-gray-300'
           }`}
         >
-          At NexusStudio, we take pride in delivering top-notch web development and creative solutions. Here are some of our standout projects that showcase our skills and expertise.
+          {intl.formatMessage({ id: "ourWork.projectsDescription" })} {/* Translated description */}
         </p>
       </section>
 
@@ -46,7 +49,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
             className="w-full h-48 object-cover"
           />
           <div
-            className={`p-6 bg-white bg-opacity-80 backdrop-blur-md rounded-b-lg ${
+            className={`p-6 rounded-b-lg ${
               theme === 'dark' ? 'bg-gray-900' : 'bg-white'
             }`}
           >
@@ -55,14 +58,14 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
                 theme === 'light' ? 'text-gray-800' : 'text-white'
               }`}
             >
-              Project One
+              {intl.formatMessage({ id: "ourWork.project1.title" })} {/* Translated project title */}
             </h3>
             <p
               className={`mb-4 ${
                 theme === 'light' ? 'text-gray-700' : 'text-gray-300'
               }`}
             >
-              This project is a dynamic web solution for a modern business. We implemented a responsive design, integrated custom features, and ensured scalability.
+              {intl.formatMessage({ id: "ourWork.project1.description" })} {/* Translated project description */}
             </p>
             <Link
               to="/project/1"
@@ -70,7 +73,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
                 theme === 'dark' ? 'text-indigo-300' : 'text-indigo-600'
               }`}
             >
-              View Project
+              {intl.formatMessage({ id: "ourWork.viewProject" })} {/* Translated button text */}
             </Link>
           </div>
         </div>
@@ -87,7 +90,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
             className="w-full h-48 object-cover"
           />
           <div
-            className={`p-6 bg-white bg-opacity-80 backdrop-blur-md rounded-b-lg ${
+            className={`p-6 rounded-b-lg ${
               theme === 'dark' ? 'bg-gray-900' : 'bg-white'
             }`}
           >
@@ -96,14 +99,14 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
                 theme === 'light' ? 'text-gray-800' : 'text-white'
               }`}
             >
-              Project Two
+              {intl.formatMessage({ id: "ourWork.project2.title" })} {/* Translated project title */}
             </h3>
             <p
               className={`mb-4 ${
                 theme === 'light' ? 'text-gray-700' : 'text-gray-300'
               }`}
             >
-              A highly engaging media solution designed to improve user interaction. Our team focused on intuitive design and seamless user experience.
+              {intl.formatMessage({ id: "ourWork.project2.description" })} {/* Translated project description */}
             </p>
             <Link
               to="/project/2"
@@ -111,7 +114,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
                 theme === 'dark' ? 'text-indigo-300' : 'text-indigo-600'
               }`}
             >
-              View Project
+              {intl.formatMessage({ id: "ourWork.viewProject" })} {/* Translated button text */}
             </Link>
           </div>
         </div>
@@ -128,7 +131,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
             className="w-full h-48 object-cover"
           />
           <div
-            className={`p-6 bg-white bg-opacity-80 backdrop-blur-md rounded-b-lg ${
+            className={`p-6 rounded-b-lg ${
               theme === 'dark' ? 'bg-gray-900' : 'bg-white'
             }`}
           >
@@ -137,14 +140,14 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
                 theme === 'light' ? 'text-gray-800' : 'text-white'
               }`}
             >
-              Project Three
+              {intl.formatMessage({ id: "ourWork.project3.title" })} {/* Translated project title */}
             </h3>
             <p
               className={`mb-4 ${
                 theme === 'light' ? 'text-gray-700' : 'text-gray-300'
               }`}
             >
-              This project includes a custom-built website with an integrated e-commerce platform, delivering a seamless shopping experience.
+              {intl.formatMessage({ id: "ourWork.project3.description" })} {/* Translated project description */}
             </p>
             <Link
               to="/project/3"
@@ -152,7 +155,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
                 theme === 'dark' ? 'text-indigo-300' : 'text-indigo-600'
               }`}
             >
-              View Project
+              {intl.formatMessage({ id: "ourWork.viewProject" })} {/* Translated button text */}
             </Link>
           </div>
         </div>
@@ -165,7 +168,7 @@ const OurWork: React.FC<OurWorkProps> = ({ theme }) => {
             theme === 'dark' ? 'bg-indigo-500' : 'bg-indigo-600'
           }`}
         >
-          Start Your Project with Us
+          {intl.formatMessage({ id: "ourWork.contactButton" })} {/* Translated contact button text */}
         </Link>
       </section>
     </div>

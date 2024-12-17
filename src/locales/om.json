@@ -1,0 +1,82 @@
+{
+    "loading": "Bani...",
+    
+    "footer": {
+      "copyright": "&copy; {year} {company}. Mirga hundi ni eeyyamame.",
+      "socialLinks": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram"
+      }
+    },
+    
+    "header": {
+      "about": "Nu Haa Beeku",
+      "ourWork": "Hojii Keenya",
+      "teams": "Team",
+      "contact": "Nu Quunnami",
+      "language": "Afaan"
+    },
+  
+    "home": {
+      "welcomeMessage": "NexusStudio Biyyoo Kee Fayyadamuu!",
+      "description": "Projektii hundaa wajjin haala haaraan hojjennu—teeknoolojii haaraa fi qajeelfama haaromsaaf bakka bu'a."
+    },
+  
+    "aboutUs": {
+      "title": "Nu Haa Beeku",
+      "description": "NexusStudio garee hojjattoota garaagaraa kan bu'uura teeknoolojii haaraa fi hojiilee multimedia keessatti dandeettii qabaatu.",
+      "mission": {
+        "title": "Kaayyoo Keenya",
+        "description": "Karaa muuxannoo dijitaalaa adda ta'e kan dandeettii guddina fi hirmaannaa fiduuf dhaabbilee cimsuuf hojjechuu."
+      }
+    },
+  
+    "ourWork": {
+      "title": "Hojii Keenya",
+      "projectsGlimpse": "Glimphee Hojii Keenya",
+      "projectsDescription": "Projektoota gurguddaa fi hojiilee haaraa waliin hojjetamanii fi gatii qaban ilaaluuf.",
+      "projects": [
+        {
+          "title": "Projektii 1",
+          "description": "Kun Projektii 1 kan dhugoomsuudhaaf gargaaru."
+        },
+        {
+          "title": "Projektii 2",
+          "description": "Kun Projektii 2 kan dhimma fayyadamtootaa keessatti dandeettii fooyya'aa fiduuf hojjetame."
+        },
+        {
+          "title": "Projektii 3",
+          "description": "Kun Projektii 3 kan dhimma hojii fi bu'aalee waliin wal qabatee tajaajilaa fi qajeelfama gargaaru."
+        }
+      ],
+      "viewProject": "Projektii Ilaali",
+      "contactButton": "Nu Quunnami"
+    },
+  
+    "teams": {
+      "title": "Team Keenya Barbaadi",
+      "description": "Team keenyaa dandeettii fi muuxannoo olaanaa qabaachuu fi tajaajila dijitaalaa sirriitti kennuuf hojjechaa jiru.",
+      "members": [
+        {
+          "name": "Joshua Germod",
+          "role": "Daayirektara Maketiingii",
+          "imageUrl": "https://via.placeholder.com/150",
+          "description": "Joshua ogeessa maketiingii sirrii fi dandeettii guddina dhaabbilee qabaachuun, yaada gurguddaa kan taasisu fi hojiilee baay'ee fudhatama qabu keessatti hirmaataa jira."
+        },
+        {
+          "name": "Million Dejene",
+          "role": "Injinerii Barbaachisaa",
+          "imageUrl": "https://via.placeholder.com/150",
+          "description": "Million injinerii barbachisaa fi hojjiiwwan gurguddaa akkaataa jijjiirama barbaachisuun dura dhaabbata."
+        },
+        {
+          "name": "Kai Heron",
+          "role": "Daayirektara Uummataa",
+          "imageUrl": "https://via.placeholder.com/150",
+          "description": "Kai dandeettii fi muuxannoo uumamaa guddaa qabu fi hojiiwwan tasgabbii fi sirriitti hojjachuu."
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,72 @@
+{
+  "loading": "እንደገና ተ 로ውዶች",
+
+  "footer": {
+    "copyright": "&copy; {year} {company}. ሁሉም መብቶች ተያዙ.",
+    "facebook": "ፌስቡክ",
+    "twitter": "ትዊተር",
+    "instagram": "ኢንስታግራም"
+  },
+
+  "header": {
+    "about": "ስለኛ",
+    "ourWork": "ስራችን",
+    "teams": "ቡድኖቻችን",
+    "contact": "እባኮትን ያነጋግሩ",
+    "language": "ቋንቋ"
+  },
+  "home": {
+    "welcomeMessage": "እንኳን ወደ NexusStudio በሰላም መጡ",
+    "description": "በሁሉም ፕሮጀክቶች ላይ እንደአዳዲስ መንገዶች በተወዳዳሪ ቅርጸት ማስተካከል—በመተላለፊያ ድር ስራና ሚዲያ መፍትሄዎች ላይ መምሪያ መድረክ።"
+  },
+  "aboutUs": {
+    "title": "ኦምስ",
+    "description": "NexusStudio ስለሆነ መረጃ አእምሮና አዳዲስ የስራ ፕሮጀክቶች እንደመሆኑ በመነሻ የመንገዶች ተመን ተጀምሮ በአማካኝነት በሙዚቃ በመንገዶች።",
+    "mission": "የእኛ ተልእኮ",
+    "missionDescription": "በአሳምኝነት ለአካባቢ አቋም ማሳሰብ በሙዚቃ ሂሳብ ማሳሰቡ"
+  },
+
+  "ourWork": {
+    "title": "ስራችን",
+    "projectsGlimpse": "በትንሹ ትዕዛዝ ስለሚታይ ፕሮጀክቶች",
+    "projectsDescription": "በሁሉም ሁኔታ በመሆኑ በሀይል አማካኝነት በተመን Ꮧ አምሳት መሆና ይችላሉ",
+    "project1": {
+      "title": "ፕሮጀክት 1",
+      "description": "ይህ ፕሮጀክት እንደተመሆኑን Ꮧ ድርመሰላይ"
+    },
+    "project2": {
+      "title": "ፕሮጀክት 2",
+      "description": "በሁሉም አምሳት እንጠብቀዋለን።"
+    },
+    "project3": {
+      "title": "ፕሮጀክት 3",
+      "description": "በመረጃና አሳማት በአእምሮና"
+    },
+    "viewProject": "ፕሮጀክትን ተመልከት",
+    "contactButton": "በሁሉ ተወንስ መጠብቀ"
+  },
+  "teams": {
+    "title": "ቡድኖቻችንን ተመልከት",
+    "description": "እኛ ቡድን በአሳሳበኝ አሳቢ እና በአሳምኝነት የሚሰሩ ተመሳሳይ መሥሪያ መሳሪያቶችን ማሳሰብ።",
+    "members": [
+      {
+        "name": "ጆሻው ገርሞድ",
+        "role": "ማርኬቲንግ ዳይሬክተር",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "ጆሻው በማርኬቲንግ ስምምነት በሚለው ማርኬቲንግ እንደ ማስታወቂያ ተመሳሳይ በሙዚቃ ስምምነት የተወዳዳሪ እንደ መንፈስ ቡድን ሁሉን በስተቴ."
+      },
+      {
+        "name": "ሚሊዮን ደጄነ",
+        "role": "ሶፍትዌር ኢንጅነር",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "ሚሊዮን በባለሙያ በምንጮች በአሳሳበኝ የሶፍትዌር ማንበብ እንባ በገጽታዊ ስምምነት አቋምሁን"
+      },
+      {
+        "name": "ካይ ሄሮን",
+        "role": "ፕሮጀክት ስምምነት ምርመራ ዳይሬክተር",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "ካይ ሄሮን በአሳምኝነት አምባሳል አዳዲስ ተዛማች ስለነፀ ቀረበት በመመለከት."
+      }
+    ]
+  }
+}

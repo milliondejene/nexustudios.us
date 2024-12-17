@@ -1,0 +1,73 @@
+{
+  "loading": "Loading...",
+  
+    "footer": {
+      "copyright": "&copy; {year} {company}. All Rights Reserved.",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    
+  },
+  
+  "header": {
+    "about": "About",
+    "ourWork": "Our Work",
+    "teams": "Teams",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "home": {
+    "welcomeMessage": "Welcome to NexusStudio",
+    "description": "Innovating with every project—your go-to platform for next-generation web development and media solutions."
+  },
+  "aboutUs": {
+  "title": "Omss",
+  "description": "NexusStudio is a creative agency specializing in innovative web development, multimedia solutions, and groundbreaking digital experiences.",
+  "mission": "Our Mission",
+  "missionDescription": "To empower businesses through exceptional digital experiences that drive growth and engagement."
+  },
+  
+  "ourWork": {
+    "title": "Our Work",
+    "projectsGlimpse": "A Glimpse of Our Projects",
+    "projectsDescription": "Explore some of our latest projects that showcase our commitment to innovation and quality.",
+    "project1": {
+      "title": "Project 1",
+      "description": "This project is about creating a sustainable solution for our clients through the use of new technology and collaboration."
+    },
+    "project2": {
+      "title": "Project 2",
+      "description": "An advanced project aimed at enhancing the user experience by integrating AI and data-driven insights."
+    },
+    "project3": {
+      "title": "Project 3",
+      "description": "We developed a platform that simplifies processes and makes work more efficient for all stakeholders."
+    },
+    "viewProject": "View Project",
+    "contactButton": "Contact Us"
+  },
+  "teams": {
+    "title": "Meet Our Team",
+    "description": "Our talented team is dedicated to providing innovative solutions and exceptional user experiences.",
+    "members": [
+      {
+        "name": "Joshua Germod",
+        "role": "Marketing Director",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Joshua is a strategic marketer with extensive experience in driving brand growth. He oversees our marketing strategies and works closely with the team to create impactful campaigns."
+      },
+      {
+        "name": "Million Dejene",
+        "role": "Software Engineer",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Million is a talented software engineer focused on building scalable and efficient applications. He ensures the technical side of projects runs smoothly and pushes for innovative solutions."
+      },
+      {
+        "name": "Kai Heron",
+        "role": "Creative Director",
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Kai is an imaginative creative director with a keen eye for visual storytelling. He leads the creative team to develop engaging content and ensures that our projects stand out with cutting-edge designs."
+      }
+    ]
+  }
+}
