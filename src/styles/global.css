@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Jersey25Charted';
+    src: url('/fonts/Jersey10-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+/* Apply the font globally to all elements */
+body {
+    font-family: 'Jersey25Charted', sans-serif;
+  }
+  
+  /* Optional: Adjust default styles for specific elements */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Jersey25Charted', sans-serif;
+    font-weight: bold; /* Adjust weights as needed */
+  }
+  
+  a {
+    font-family: 'Jersey25Charted', sans-serif;
+    text-decoration: none; /* Optional: remove underline */
+  }
+  
+  p, li, span, div, button {
+    font-family: 'Jersey25Charted', sans-serif;
+  }
