@@ -6,7 +6,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     <link
       key="jersey"
       rel="preload"
-      href="/fonts/Jersey10Charted-Regular.ttf"
+      href="/fonts/PoetsenOne-Regular.ttf"
       as="font"
       type="font/ttf"
       crossOrigin="anonymous"
