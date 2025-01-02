@@ -6,40 +6,48 @@ import Teams from "../components/Teams";
 import { IntlProvider } from "gatsby-plugin-intl";
 import { useIntl } from "gatsby-plugin-intl";
 
+// Lazy-loaded components
 const Home = lazy(() => import("../components/Home"));
 const About = lazy(() => import("../components/About"));
 const Contact = lazy(() => import("../components/Contact"));
 
-const App: React.FC = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const intl = useIntl(); // Get current language and translations
+const IndexPage: React.FC = () => {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const intl = useIntl(); // Localization handler from gatsby-plugin-intl
 
-  // Check and set theme from localStorage
+  // Load the theme preference from localStorage on mount
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.add(savedTheme);
-    } else {
-      document.documentElement.classList.add('light'); // Default theme
-    }
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark";
+    const defaultTheme = savedTheme || "light";
+    setTheme(defaultTheme);
+    document.documentElement.classList.add(defaultTheme);
   }, []);
 
-  // Toggle theme function
+  // Toggle the theme and save the preference
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    document.documentElement.classList.remove(theme);
-    document.documentElement.classList.add(newTheme);
-    localStorage.setItem('theme', newTheme); // Save theme preference
+    document.documentElement.classList.replace(theme, newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   return (
     <IntlProvider locale={intl.locale} messages={intl.messages}>
-      <div className={`font-sans min-h-screen ${theme === 'light' ? 'bg-gradient-to-b from-blue-50 to-white' : 'bg-gray-900 text-white'}`}>
+      <div
+        className={`font-sans min-h-screen ${
+          theme === "light"
+            ? "bg-gradient-to-b from-blue-50 to-white"
+            : "bg-gray-900 text-white"
+        }`}
+      >
+        {/* Header */}
         <Header toggleTheme={toggleTheme} theme={theme} />
+
+        {/* Main Content */}
         <main>
-          <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+          <Suspense
+            fallback={<div className="text-center py-10">Loading...</div>}
+          >
             <Home />
             <About theme={theme} />
             <OurWork theme={theme} />
@@ -47,10 +55,12 @@ const App: React.FC = () => {
             <Contact />
           </Suspense>
         </main>
+
+        {/* Footer */}
         <Footer theme={theme} />
       </div>
     </IntlProvider>
   );
 };
 
-export default App;
+export default IndexPage;
