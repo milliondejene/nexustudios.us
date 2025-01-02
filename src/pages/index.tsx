@@ -1,4 +1,5 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import OurWork from "../components/our-work";
@@ -43,16 +44,80 @@ const IndexPage: React.FC = () => {
         {/* Header */}
         <Header toggleTheme={toggleTheme} theme={theme} />
 
+        {/* Navigation links */}
+        <nav className="fixed top-0 left-0 right-0 bg-gray-800 text-white p-4 z-10">
+          <ul className="flex space-x-4">
+            <li>
+              <Link
+                to="home" // ID of the Home section
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="about" // ID of the About section
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="ourwork" // ID of the OurWork section
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Our Work
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="teams" // ID of the Teams section
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Teams
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="contact" // ID of the Contact section
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
         {/* Main Content */}
         <main>
-          <Suspense
-            fallback={<div className="text-center py-10">Loading...</div>}
-          >
-            <Home />
-            <About theme={theme} />
-            <OurWork theme={theme} />
-            <Teams theme={theme} />
-            <Contact />
+          <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+            <section id="home">
+              <Home />
+            </section>
+            <section id="about">
+              <About theme={theme} />
+            </section>
+            <section id="ourwork">
+              <OurWork theme={theme} />
+            </section>
+            <section id="teams">
+              <Teams theme={theme} />
+            </section>
+            <section id="contact">
+              <Contact />
+            </section>
           </Suspense>
         </main>
 

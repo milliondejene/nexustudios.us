@@ -81,7 +81,7 @@ const Teams: React.FC<TeamsProps> = ({ theme }) => {
               >
                 <h3
                   className={`text-xl font-semibold mb-4 ${
-                    theme === "light" ? "text-gray-800" : "text-white"
+                "text-gray-800"
                   }`}
                 >
                   {member.name}

@@ -6,6 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
 /* Apply the font globally to all elements */
+
+* {
+  letter-spacing: 0.05em
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Poetsen One', sans-serif;
 }
