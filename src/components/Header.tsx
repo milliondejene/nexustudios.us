@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   return (
     <header
       className={`fixed top-0 left-0 w-full ${
-        theme === 'light' ? 'bg-white bg-opacity-80' : 'bg-gray-800 bg-opacity-90'
+        theme === 'light' ? 'bg-white bg-opacity-80' : 'bg-gray-800 bg-opacity-80'
       } backdrop-blur-sm shadow-lg z-50`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
